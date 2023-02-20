@@ -1,5 +1,9 @@
 package hello.core.member;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class MemberServiceImpl implements MemberService{
 
 
@@ -8,6 +12,7 @@ public class MemberServiceImpl implements MemberService{
 
     //중요!!
     //생성자 : 객체 의존성 주입을 받기 위해 선언했다. 이제 파라미터에 구현 객체가 들어올 것이다.
+    @Autowired
      public MemberServiceImpl(MemberRepository memberRepository) {
 
          this.memberRepository = memberRepository;
